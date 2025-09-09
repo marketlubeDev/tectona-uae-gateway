@@ -11,43 +11,47 @@ const Navigation = () => {
       setIsScrolled(window.scrollY > 50);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const scrollToSection = (sectionId: string) => {
-    document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" });
     setIsMenuOpen(false);
   };
 
   const navItems = [
-    { label: 'Home', id: 'home' },
-    { label: 'About', id: 'about' },
-    { label: 'Services', id: 'services' },
-    { label: 'Projects', id: 'projects' },
-    { label: 'Contact', id: 'contact' },
+    { label: "Home", id: "home" },
+    { label: "About", id: "about" },
+    { label: "Services", id: "services" },
+    { label: "Projects", id: "projects" },
+    { label: "Contact", id: "contact" },
   ];
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-white/95 backdrop-blur-md shadow-md' : 'bg-transparent'
-    }`}>
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled ? "bg-white/95 backdrop-blur-md shadow-md" : "bg-transparent"
+      }`}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
             <button
-              onClick={() => scrollToSection('home')}
+              onClick={() => scrollToSection("home")}
               className="flex items-center space-x-2 hover:opacity-80 transition-opacity"
             >
-              <img 
-                src="/lovable-uploads/0637d199-0284-4464-8db6-3cc30c6ade20.png" 
-                alt="TECTONA Group UAE" 
-                className="h-10 lg:h-12"
+              <img
+                src="/lovable-uploads/0637d199-0284-4464-8db6-3cc30c6ade20.png"
+                alt="TECTONA Group UAE"
+                className={`h-10 lg:h-12 transition-all ${
+                  isScrolled
+                    ? "contrast-110"
+                    : "filter brightness-115 contrast-125 saturate-125 drop-shadow-[0_2px_10px_rgba(0,0,0,0.6)]"
+                }`}
               />
-              <span className={`font-bold text-lg lg:text-xl transition-colors ${
-                isScrolled ? 'text-primary' : 'text-white'
-              }`}>
+              <span className="font-bold text-lg lg:text-xl transition-colors text-primary">
                 TECTONA
               </span>
             </button>
@@ -60,9 +64,7 @@ const Navigation = () => {
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className={`px-3 py-2 text-sm font-medium transition-colors hover:text-tectona-orange ${
-                    isScrolled ? 'text-foreground' : 'text-white'
-                  }`}
+                  className="px-3 py-2 text-sm font-medium transition-colors text-foreground hover:text-tectona-orange"
                 >
                   {item.label}
                 </button>
@@ -73,7 +75,7 @@ const Navigation = () => {
           {/* CTA Button (Desktop) */}
           <div className="hidden md:block">
             <Button
-              onClick={() => window.open('tel:+916238533609', '_self')}
+              onClick={() => window.open("tel:+916238533609", "_self")}
               className="bg-tectona-orange hover:bg-tectona-orange-light text-white font-semibold"
             >
               Call Now
@@ -84,9 +86,7 @@ const Navigation = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className={`p-2 rounded-md transition-colors ${
-                isScrolled ? 'text-foreground hover:text-tectona-orange' : 'text-white hover:text-tectona-orange'
-              }`}
+              className="p-2 rounded-md transition-colors text-foreground hover:text-tectona-orange"
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -109,13 +109,15 @@ const Navigation = () => {
             ))}
             <div className="pt-2 space-y-2">
               <Button
-                onClick={() => window.open('https://wa.me/916238533609', '_blank')}
+                onClick={() =>
+                  window.open("https://wa.me/916238533609", "_blank")
+                }
                 className="w-full bg-tectona-orange hover:bg-tectona-orange-light text-white font-semibold"
               >
                 Contact Us
               </Button>
               <Button
-                onClick={() => window.open('tel:+916238533609', '_self')}
+                onClick={() => window.open("tel:+916238533609", "_self")}
                 variant="outline"
                 className="w-full border-tectona-orange text-tectona-orange hover:bg-tectona-orange hover:text-white"
               >
