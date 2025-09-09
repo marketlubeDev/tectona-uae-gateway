@@ -51,14 +51,14 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Phone",
-      details: ["+971 4 XXX XXXX", "+971 50 XXX XXXX"],
-      action: "tel:+971"
+      details: ["+91 62385 33609"],
+      action: "tel:+916238533609"
     },
     {
       icon: MessageSquare,
       title: "WhatsApp",
-      details: ["+971 50 XXX XXXX"],
-      action: "https://wa.me/971"
+      details: ["+91 62385 33609"],
+      action: "https://wa.me/916238533609"
     },
     {
       icon: Mail,
@@ -218,21 +218,6 @@ const Contact = () => {
                   </Card>
                 );
               })}
-            </div>
-
-            {/* Google Maps Embed */}
-            <div className="mt-8">
-              <Card className="shadow-xl overflow-hidden">
-                <CardContent className="p-0">
-                  <div className="h-64 bg-muted flex items-center justify-center">
-                    <div className="text-center text-muted-foreground">
-                      <MapPin className="w-12 h-12 mx-auto mb-4 text-tectona-orange" />
-                      <p className="text-lg font-medium">Google Maps Integration</p>
-                      <p className="text-sm">Location: Dubai, UAE</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
             </div>
           </div>
         </div>

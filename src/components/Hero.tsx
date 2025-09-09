@@ -24,7 +24,7 @@ const Hero = () => {
           <img 
             src="/lovable-uploads/0637d199-0284-4464-8db6-3cc30c6ade20.png" 
             alt="TECTONA Group UAE" 
-            className="h-24 sm:h-32 mx-auto filter drop-shadow-lg"
+            className="h-24 sm:h-32 mx-auto filter drop-shadow-2xl brightness-110 contrast-125"
           />
         </div>
         
@@ -43,22 +43,14 @@ const Hero = () => {
           Rooted in Trust. Growing with Innovation.
         </p>
         
-        {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16 animate-fade-in-up">
+        {/* CTA Button */}
+        <div className="flex justify-center mb-16 animate-fade-in-up">
           <Button 
             size="lg" 
             className="bg-tectona-orange hover:bg-tectona-orange-light text-white font-semibold px-8 py-4 text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
-            onClick={() => scrollToSection('contact')}
+            onClick={() => window.open('https://wa.me/916238533609', '_blank')}
           >
             Contact Us
-          </Button>
-          <Button 
-            size="lg" 
-            variant="outline" 
-            className="border-2 border-white text-white hover:bg-white hover:text-primary font-semibold px-8 py-4 text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
-            onClick={() => scrollToSection('contact')}
-          >
-            Request Quote
           </Button>
         </div>
         

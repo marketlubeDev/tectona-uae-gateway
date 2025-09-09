@@ -73,10 +73,10 @@ const Navigation = () => {
           {/* CTA Button (Desktop) */}
           <div className="hidden md:block">
             <Button
-              onClick={() => scrollToSection('contact')}
+              onClick={() => window.open('tel:+916238533609', '_self')}
               className="bg-tectona-orange hover:bg-tectona-orange-light text-white font-semibold"
             >
-              Get Quote
+              Call Now
             </Button>
           </div>
 
@@ -107,12 +107,19 @@ const Navigation = () => {
                 {item.label}
               </button>
             ))}
-            <div className="pt-2">
+            <div className="pt-2 space-y-2">
               <Button
-                onClick={() => scrollToSection('contact')}
+                onClick={() => window.open('https://wa.me/916238533609', '_blank')}
                 className="w-full bg-tectona-orange hover:bg-tectona-orange-light text-white font-semibold"
               >
-                Get Quote
+                Contact Us
+              </Button>
+              <Button
+                onClick={() => window.open('tel:+916238533609', '_self')}
+                variant="outline"
+                className="w-full border-tectona-orange text-tectona-orange hover:bg-tectona-orange hover:text-white"
+              >
+                Call Now
               </Button>
             </div>
           </div>

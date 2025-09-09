@@ -51,11 +51,15 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-tectona-orange" />
-                <span className="text-primary-foreground/80">+971 4 XXX XXXX</span>
+                <a href="tel:+916238533609" className="text-primary-foreground/80 hover:text-tectona-orange transition-colors">
+                  +91 62385 33609
+                </a>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-tectona-orange" />
-                <span className="text-primary-foreground/80">info@tectonagroup.ae</span>
+                <a href="mailto:info@tectonagroup.ae" className="text-primary-foreground/80 hover:text-tectona-orange transition-colors">
+                  info@tectonagroup.ae
+                </a>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="w-5 h-5 text-tectona-orange" />
